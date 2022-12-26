@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prosto+One&display=swap" rel="stylesheet">    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="content1">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Welcome to Dice Game</h5>
+          <div class="content">
+            <form class="row g-3" id="form">
+                <div class="col-12">
+                  <label for="inputAddress" class="form-label">Player 1</label>
+                  <input type="text" class="form-control" id="first-name" placeholder="Enter your name">
+                </div>
+                <div class="col-12">
+                  <label for="inputAddress2" class="form-label">Player 2</label>
+                  <input type="text" class="form-control" id="second-name" placeholder="Enter your name">
+                </div>
+                <div class="col-12 click">
+                    <button type="button submit" class="btn btn-primary">Play</button>
+                     </div>
+            </form>
+            </div>    
+        </div>
+      </div>
+      </div>
+    <script>
+
+        const form =document.getElementById('form');
+        const firstName = document.getElementById('first-name');
+        const secondName = document.getElementById('second-name');
+        
+        form.addEventListener('submit', function(e)
+        {
+            e.preventDefault();
+            const firstNameValue = firstName.value;
+            const SecondNameValue = secondName.value;
+
+            localStorage.setItem('firstName',firstNameValue);
+            localStorage.setItem('secondName',SecondNameValue);
+
+            window.location.href="index.html"
+        })
+
+        function redirect()
+        {
+           // window.location="\index.html"
+        }
+    </script>
+</body>
+</html>
